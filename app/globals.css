@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Fonts */
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Orbitron", sans-serif;
+}
+
+/* === Global Styles === */
+body {
+  @apply relative w-screen h-screen overflow-hidden font-primary bg-cyan-950 text-white leading-relaxed;
+}
+
+.container {
+  @apply mx-auto max-w-400 h-full;
+}
+
+.flipClock {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-spacing: 8px; /* space between unit times and separators */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+  --fcc-digit-font-size: 30px; /* font size of digit */
+  --fcc-digit-color: #000000; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #ffffff; /* color of label */
+  --fcc-background: #ffffff; /* background of digit card */
+  --fcc-divider-color: #000000; /* color of divider */
+  --fcc-divider-height: 1px; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: #ffffff; /* color of colon */
+}
+
+@media (min-width: 900px) {
+  .flipClock {
+    --fcc-digit-block-width: 80px;
+    --fcc-digit-block-height: 120px;
+    --fcc-digit-font-size: 60px;
+    --fcc-digit-color: #000000;
+    --fcc-label-font-size: 20px;
+  }
+}
